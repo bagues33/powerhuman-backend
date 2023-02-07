@@ -22,16 +22,17 @@ class Employee extends Model
         'age',
         'phone',
         'photo',
+        'team_id',
         'role_id',
         'is_verified',
         'verified_at',
     ];
 
-    public function teams() {
+    public function team() {
         return $this->belongsTo(Team::class);
     }
 
-    public function roles() {
+    public function role() {
         return $this->belongsTo(Role::class);
     }
 }
